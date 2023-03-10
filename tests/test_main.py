@@ -1,4 +1,4 @@
-from roombooking import __version__
+from ticketbooking import __version__
 
 
 def test_version():

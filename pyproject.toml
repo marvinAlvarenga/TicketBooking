@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "roombooking"
+name = "ticketbooking"
 version = "0.1.0"
-description = "Room booking Api"
+description = "Ticket booking Api"
 authors = ["Marvin Alvarenga <marvinalexz@gmail.com>"]
 readme = "README.md"
 

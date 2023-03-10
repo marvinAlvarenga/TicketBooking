@@ -2,4 +2,4 @@
 
 isort --atomic .
 
-black alembic roombooking tests
+black alembic ticketbooking tests
