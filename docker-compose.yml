@@ -16,3 +16,13 @@ services:
       - ./roombooking:/app/roombooking
       - ./tests:/app/tests
       - ./alembic:/app/alembic
+  db:
+    image: postgres:14
+    env_file:
+      - .env
+    ports:
+      - ${DB_PORT}:5432
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
