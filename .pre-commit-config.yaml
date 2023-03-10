@@ -1,0 +1,15 @@
+repos:
+-   repo: local
+    hooks:
+      - id: formatting
+        name: Run Formatters
+        entry: ./scripts/format.sh
+        language: script
+      - id: linting
+        name: Run Linters
+        entry: ./scripts/lint.sh
+        language: script
+      - id: testing
+        name: Run Tests
+        entry: ./scripts/tests.sh
+        language: script
