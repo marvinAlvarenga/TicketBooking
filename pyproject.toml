@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.10"
 fastapi = "^0.93.0"
 uvicorn = {extras = ["standar"], version = "^0.20.0"}
-SQLAlchemy = "1.4"
+SQLAlchemy = "^1.4"
 alembic = "^1.10.2"
 pydantic = "^1.10.6"
 pytz = "^2022.7.1"
