@@ -1,4 +1,4 @@
-FROM python:3.10.10-bullseye as develop
+FROM python:3.10.10-bullseye as builder
 
 RUN apt update
 
@@ -10,6 +10,7 @@ RUN poetry config virtualenvs.create false
 
 COPY . .
 RUN poetry install
+RUN poetry build --format=wheel --no-interaction
 
 RUN chmod -R +x ./scripts
 CMD ["./scripts/entrypoint.sh"]

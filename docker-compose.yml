@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      target: develop
+      target: builder
     image: room-booking-api:dev
     container_name: room-booking-api
     env_file:
