@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: develop
+    image: room-booking-api:dev
+    container_name: room-booking-api
+    env_file:
+      - .env
+    ports:
+      - ${API_PORT}:${API_PORT}
+    volumes:
+      - ./roombooking:/app/roombooking
+      - ./tests:/app/tests
