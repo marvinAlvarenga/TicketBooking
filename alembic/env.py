@@ -3,8 +3,9 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 
 from alembic import context
+from ticketbooking.api.events import models as events
 from ticketbooking.common.env import env
-from ticketbooking.common.models import Base
+from ticketbooking.config.db import Base
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

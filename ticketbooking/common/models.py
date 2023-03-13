@@ -1,5 +1,21 @@
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, DateTime, Identity, Integer
 
-from ticketbooking.config.db import engine
+from ticketbooking.common.utils import now
 
-Base = declarative_base(bind=engine)
+
+class IdentityModel:
+    id = Column(Integer, Identity(), primary_key=True)
+
+
+class AuditModel:
+    created_at = Column(
+        DateTime(timezone=True),
+        nullable=False,
+        default=now,
+    )
+    updated_at = Column(
+        DateTime(timezone=True),
+        nullable=False,
+        default=now,
+        onupdate=now,
+    )
