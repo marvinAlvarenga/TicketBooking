@@ -1,5 +1,4 @@
 from enum import Enum
-from functools import lru_cache
 
 from pydantic import BaseSettings, validator
 from pytz import all_timezones
@@ -44,6 +43,4 @@ class Env(BaseSettings):
     __TIME_ZONE = validator("TIME_ZONE")(check_timezone)
 
 
-@lru_cache()
-def get_env() -> Env:
-    return Env()
+env = Env()
