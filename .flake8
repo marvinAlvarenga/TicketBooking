@@ -9,3 +9,5 @@ exclude =
 per-file-ignores =
     # imported but unused
     alembic/env.py: F401
+extend-immutable-calls =
+    Depends
